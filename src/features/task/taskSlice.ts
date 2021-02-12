@@ -88,7 +88,8 @@ const taskSlice = createSlice({
                 state.editedTask = action.payload;
             },
             selectTask(state:taskState, action:PayloadAction<taskType>) {
-                state.editedTask = action.payload;
+                state.selectedTask = action.payload;
+                console.log(state.selectedTask)
             }
         },
         extraReducers: (builder => {
