@@ -12,10 +12,10 @@ type taskState = {
 const initialState:taskState = {
     tasks: [
         {
-            id: 1,
-            title: "task1",
-            created_at: "aaa",
-            updated_at: "aaa"
+            id: 0,
+            title: "",
+            created_at: "",
+            updated_at: "",
         },
         {
             id: 2,
@@ -25,17 +25,17 @@ const initialState:taskState = {
         },
     ],
     editedTask: {
-        id: 1,
-        title: "task1",
-        created_at: "aaa",
-        updated_at: "aaa"
+        id: 0,
+        title: "",
+        created_at: "",
+        updated_at: "",
     },
     selectedTask: {
-        id: 1,
-        title: "task1",
-        created_at: "aaa",
-        updated_at: "aaa"
-    }
+        id: 0,
+        title: "",
+        created_at: "",
+        updated_at: "",
+    },
 }
 
 const apiUrl = "http://localhost:8000/api/tasks/";

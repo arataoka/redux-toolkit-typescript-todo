@@ -8,6 +8,10 @@ export type authenType = {
     username:string,
     password:string,
 }
+export type JWT = {
+    refresh: string;
+    access: string;
+}
 
 export type isLoginViewType = boolean;
 export type profileType = {
@@ -22,6 +26,6 @@ export type loginStateType ={
 export type taskType = {
     id: number,
     title: string,
-    created_at: string,
-    updated_at: string
+    created_at?: string,
+    updated_at?: string
 }

@@ -8,9 +8,8 @@ import {
     editPassword,
     toggleMode,
     fetchAsyncLogin,
-    fetchAsyncProf,
     fetchAsyncRegister,selectAuthen,
-    selectIsLoginView,selectProfile
+    selectIsLoginView,
 } from "./loginSlice"
 
 const Login:React.FC = () => {
@@ -20,13 +19,11 @@ const Login:React.FC = () => {
     const btnDisabler = authen.username === "" || authen.password==="";
     const login = async()=>{
         if(isLoginView){
-            // @ts-ignore
             await dispatch(fetchAsyncLogin(authen));
         }else{
-            // @ts-ignore
             const result = await dispatch(fetchAsyncRegister(authen));
+            // @ts-ignore
             if(fetchAsyncRegister.fulfilled.match(result)){
-                // @ts-ignore
                 await dispatch(fetchAsyncLogin(authen))
             }
         }
@@ -70,5 +67,4 @@ const Login:React.FC = () => {
     );
 };
 
-// @ts-ignore
 export default Login;
